@@ -1,0 +1,41 @@
+
+window.onload = plansza;
+
+
+var pola = new Array(64)
+
+pola[0] = "A1";pola[8] = "B1"; pola[16] = "C1";pola[24] = "D1";pola[32] = "E1";pola[40] = "F1";pola[48] = "G1";pola[56] = "H1";
+pola[1] = "A2";pola[9] = "B2"; pola[17] = "C2";pola[25] = "D2";pola[33] = "E2";pola[41] = "F2";pola[49] = "G2";pola[57] = "H2";
+pola[2] = "A3";pola[10] = "B3";pola[18] = "C3";pola[26] = "D3";pola[34] = "E3";pola[42] = "F3";pola[50] = "G3";pola[58] = "H3";
+pola[3] = "A4";pola[11] = "B4";pola[19] = "C4";pola[27] = "D4";pola[35] = "E4";pola[43] = "F4";pola[51] = "G4";pola[59] = "H4";
+pola[4] = "A5";pola[12] = "B5";pola[20] = "C5";pola[28] = "D5";pola[36] = "E5";pola[44] = "F5";pola[52] = "G5";pola[60] = "H5";
+pola[5] = "A6";pola[13] = "B6";pola[21] = "C6";pola[29] = "D6";pola[37] = "E6";pola[45] = "F6";pola[53] = "G6";pola[61] = "H6";
+pola[6] = "A7";pola[14] = "B7";pola[22] = "C7";pola[30] = "D7";pola[38] = "E7";pola[46] = "F7";pola[54] = "G7";pola[62] = "H7";
+pola[7] = "A8";pola[15] = "B8";pola[23] = "C8";pola[31] = "D8";pola[39] = "E8";pola[47] = "F8";pola[55] = "G8";pola[63] = "H8";
+
+	var color = new Array(3)
+	color[0]="white";color[1]="blue";color[2]="green";
+
+function plansza()
+
+{
+	var tresc_diva=""
+	
+	for (i=0;i<=63;i++)
+	{
+		
+		tresc_diva= tresc_diva +'<div class="pole" id="'+pola[i]+'"></div>';
+		if((i+1)%8==0)tresc_diva= tresc_diva + '<div style="clear:both"></div>';
+	}
+		document.getElementById("board").innerHTML = tresc_diva;
+		
+		
+
+	for (i=0;i<=63;i++)
+	{		
+		k=i/8;
+		zm = "take me away";
+		document.getElementById("okno1").innerHTML = zm;
+	}
+
+}
